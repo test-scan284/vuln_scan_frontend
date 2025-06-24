@@ -10,8 +10,7 @@ import { DAST } from './pages/DAST';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { AboutDAST } from './pages/AboutDAST';
-import { Dashboard } from './pages/Dashboard'; // Added Dashboard import
-import { ProtectedRoute } from './components/ProtectedRoute';
+import { Dashboard } from './pages/Dashboard';
 import { AuthProvider } from './contexts/AuthContext';
 import FreePlan from './pages/FreePlan';
 import Paid_Page from './pages/Paid_Page';
@@ -31,86 +30,16 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/reset-password/confirmation" element={<ResetPasswordConfirmation />} />
-            <Route
-              path="/home"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/dast"
-              element={
-                <ProtectedRoute>
-                  <DAST />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/dashboard"
-              element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/about-dast"
-              element={
-                <ProtectedRoute>
-                  <AboutDAST />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <ProtectedRoute>
-                  <About />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <ProtectedRoute>
-                  <Contact />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/sast"
-              element={
-                <ProtectedRoute>
-                  <Select />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/free-plan"
-              element={
-                <ProtectedRoute>
-                  <FreePlan />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/paid-plan"
-              element={
-                <ProtectedRoute>
-                  <PaidInput />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/Paid_Page"
-              element={
-                <ProtectedRoute>
-                  <Paid_Page />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/home" element={<Home />} />
+            <Route path="/dast" element={<DAST />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about-dast" element={<AboutDAST />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/sast" element={<Select />} />
+            <Route path="/free-plan" element={<FreePlan />} />
+            <Route path="/paid-plan" element={<PaidInput />} />
+            <Route path="/Paid_Page" element={<Paid_Page />} />
           </Routes>
         </Router>
       </AuthProvider>

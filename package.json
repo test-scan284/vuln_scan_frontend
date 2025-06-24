@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "node server/index.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy":"npm run build"
   },
   "dependencies": {
     "@nestjs/mongoose": "^11.0.0",
@@ -39,6 +40,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "homepage":"http://test-scan284.github.io/vuln_scan_frontend",
     "@eslint/js": "^9.9.1",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
